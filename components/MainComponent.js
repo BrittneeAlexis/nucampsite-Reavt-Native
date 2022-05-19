@@ -22,7 +22,7 @@ const mapDispatchToProps = {
 };
 
 const DirectoryNavigator = createStackNavigator(
-    {
+    {  
         Directory: { 
             screen: Directory,
             navigationOptions: ({navigation}) => ({
