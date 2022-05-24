@@ -3,9 +3,9 @@ import { ActivityIndicator, StyleSheet, Text , View, ViewBase } from 'react-nati
 
 function Loading () {
     return (
-        <View style ={ style.loadingView }>
+        <View style ={styles.loadingView}>
             <ActivityIndicator size='large' color='#56370D' />
-            <Text style= {style.loadingText}> Loading...</Text>
+            <Text style= {styles.loadingText}> Loading...</Text>
         </View>
     );
 }
