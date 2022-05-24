@@ -7,6 +7,8 @@ import { connect } from 'react-redux';
 import { Loading } from './LoadingComponent';
 import { baseUrl } from '../shared/baseUrl';
 import { SwipeRow } from 'react-native-swipe-list-view';
+import * as Animatable from 'react-native-animatable';
+
 
 
 const mapStateToProps = state => {
@@ -88,6 +90,8 @@ class Favorites extends Component {
             );
         }
         return (
+            <Animatable.View animation="fadeInRightBig" duration={2000}>
+
             <FlatList
                 data={this.props.campsites.campsites.filter(
                     campsite => this.props.favorites.includes(campsite.id)
@@ -95,6 +99,7 @@ class Favorites extends Component {
                 renderItem={renderFavoriteItem}
                 keyExtractor={item => item.id.toString()}
             />
+             </Animatable.View>
         );
     }
 }
